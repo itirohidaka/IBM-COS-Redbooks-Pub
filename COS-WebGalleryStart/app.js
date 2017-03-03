@@ -23,8 +23,7 @@ app.get('/', function (req, res) {
 // get the app environment from Cloud Foundry
 var appEnv = cfenv.getAppEnv();
 
-// start server on the specified port and binding host
-app.listen(appEnv.port, '0.0.0.0', function() {
-  // print a message when the server starts listening
-  console.log("server starting on " + appEnv.url);
+var port = process.env.PORT || 3000
+app.listen(port, function() {
+    console.log("To view your app, open this link in your browser: http://localhost:" + port);
 });
