@@ -3,6 +3,3 @@
 
 # Node.js modules:
 node_modules/
-
-# Local env config:
-.env
